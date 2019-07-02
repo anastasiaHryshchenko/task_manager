@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+
+<div class="container">
+   <h1 style="text-align: center;">Edit Task</h1>
+    <div style="width: 30%; margin: 50px auto;">
+        <form action="/projects/<%= project_id %>/tasks/<%= task._id %>?_method=PUT" method="POST">
+            <div class="form-group">
+               <input class="form-control" type="text" name="task[text]" placeholder="text" value="<%= task.text %>"> 
+            </div>
+            <div class="form-group">
+                <input class="form-control" list="priority_status" name="task[priority]" placeholder="priority" value="<%= task.priority %>"/>
+                <datalist id="priority_status">
+                    <option value="High">
+                    <option value="Normal">
+                    <option value="Low">                    
+                </datalist>                
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="date" name="task[duedate]" placeholder="duedate" value="<%= task.duedate %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" list="status" name="task[status]" placeholder="status" value="<%= task.status %>"/>
+                <datalist id="status">
+                    <option value="New">
+                    <option value="In Progress">
+                    <option value="Complete">                    
+                </datalist>                
+            </div>
+            <div class="form-group">
+               <input class="form-control" type="number" name="task[percentCompleted]" placeholder="percent" min="0" step="1" max="100" value="<%= task.percentCompleted %>"> 
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block">Submit!</button>
+            </div>
+        </form>
+        <a href="/projects/<%= project_id %>">Go Back</a>
+    </div>
+</div>
+
+<% include ../partials/footer %>

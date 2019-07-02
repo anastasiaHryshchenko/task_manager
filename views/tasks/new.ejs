@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+
+<div class="container">
+   <h1 style="text-align: center;">Add New Task to <%= project.name %></h1>
+    <div style="width: 30%; margin: 50px auto;">
+        <form action="/projects/<%= project._id %>/tasks" method="POST">
+            <div class="form-group">
+               <input class="form-control" type="text" name="task[text]" placeholder="text"> 
+            </div>
+            <div class="form-group">
+                <input class="form-control" list="priority_status" name="task[priority]" placeholder="priority"/>
+                <datalist id="priority_status">
+                    <option value="High">
+                    <option value="Normal">
+                    <option value="Low">                    
+                </datalist>                
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="date" name="task[duedate]" placeholder="duedate">
+            </div>
+            <div class="form-group">
+                <input class="form-control" list="status" name="task[status]" placeholder="status"/>
+                <datalist id="status">
+                    <option value="New">
+                    <option value="In Progress">
+                    <option value="Complete">                    
+                </datalist>                
+            </div>
+            <div class="form-group">
+               <input class="form-control" type="number" name="task[percentCompleted]" placeholder="percent" min="0" step="1" max="100"> 
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block">Submit!</button>
+            </div>
+        </form>
+        <a href="/projects/<%= project._id %>">Go Back</a>
+    </div>
+</div>
+
+<% include ../partials/footer %>
