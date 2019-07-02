@@ -1,0 +1,20 @@
+body {
+  background-image: url('http://www.managementjournal.net/images/stories/Contenidos/Top_Management/Capital_Humano/capital-humano.jpg');
+  background-position: top;
+  background-size: cover;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+  width: inherit;
+}
+
+#header h1{
+  display: inline-block;
+  color: #1d3273;
+  background-color: #ebf4fd;
+  border-radius: 5px;
+}

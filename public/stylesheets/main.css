@@ -1,0 +1,81 @@
+hr{
+    margin: 10px 0;
+}
+
+td{
+    margin: 0;
+    padding: 0;
+}
+
+.img-thumbnail{
+    margin-top: 10px;
+    padding: 0 0;
+}
+
+.img-thumbnail img{
+    width: 100%;
+}
+
+.caption-full{
+    margin: 10px;
+}
+
+.card{
+    margin: 10px 0;
+}
+
+.text-right{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.row{
+    margin: 10px;
+}
+
+.alert{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.fa-angle-down{
+    font-size: 30px; 
+    color: gray;
+}
+
+.fa-minus{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 100px;
+    color: gray;
+}
+
+
+#delete-form{
+    display: inline;
+}
+
+span{     
+    height: 40px;
+    width: 0;      
+    text-align: center;    
+    display: inline-block;
+    transition: 0.2s linear;
+    opacity: 0;
+}
+
+tr:hover span{
+    width: 40px;
+    opacity: 1.0;
+}
+
+li {
+    list-style-type: none;    
+    margin: 0;
+   }
+
+ul{
+    padding-left: 0px;
+    margin-bottom: 0px;    
+}
