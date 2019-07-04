@@ -13,7 +13,9 @@ var taskRoutes    = require("./routes/tasks"),
     projectRoutes = require("./routes/projects"),
     authRoutes       = require("./routes/auth");
     
-var url =  "mongodb://localhost:27017/task_manager";
+var url = "mongodb://Nastyona:$i22h11p64@ds347467.mlab.com:47467/task_manager";
+
+//var url =  "mongodb://localhost:27017/task_manager";
 mongoose.connect(url, { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
